@@ -1,0 +1,12 @@
+Method, URI, Protocol, Referrer
+GET, /client-campaign-details/6708, HTTP/1.1,https://login.smsinbd.com/root-campaign-report 
+GET, /client-campaign-details/img/a0.jpg, HTTP/1.1,https://login.smsinbd.com/client-campaign-details/6708 
+GET, /root-client-total-sms-send, HTTP/1.1,https://login.smsinbd.com/client-campaign-details/6708 
+GET, /root-client-total-sms-send, HTTP/1.1,https://login.smsinbd.com/client-campaign-details/6708 
+GET, /root-client-archive-total-sms-send, HTTP/1.1,https://login.smsinbd.com/client-campaign-details/6708 
+GET, /root-client-total-sms-campaign, HTTP/1.1,https://login.smsinbd.com/client-campaign-details/6708 
+GET, /root-client-archive-total-sms-campaign, HTTP/1.1,https://login.smsinbd.com/client-campaign-details/6708 
+GET, /root-client-sms-sent-total-consulate-report, HTTP/1.1,https://login.smsinbd.com/client-campaign-details/6708 
+POST, /client-campaign-data/6708, HTTP/1.1,https://login.smsinbd.com/client-campaign-details/6708 
+GET, /libs/assets/images/sort_both.png, HTTP/1.1,https://login.smsinbd.com/libs/assets/datatable/dataTables.bootstrap.css 
+GET, /libs/assets/images/sort_asc.png, HTTP/1.1,https://login.smsinbd.com/libs/assets/datatable/dataTables.bootstrap.css 
