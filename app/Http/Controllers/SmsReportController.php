@@ -1687,7 +1687,7 @@ class SmsReportController extends Controller
 
         $data = [];
 
-        $records = DB::select(DB::raw("SELECT SUM(sms_count) as totalsms FROM user_count_smses WHERE user_id = ? AND DATE(created_at) BETWEEN ? AND ?"), [$userid, $fromdate, $todate]);
+        $records = DB::select(DB::raw("SELECT SUM(sms_count) as totalsms FROM user_count_smses WHERE user_id = ?"), [$userid]);
         
         return $records;
     }
