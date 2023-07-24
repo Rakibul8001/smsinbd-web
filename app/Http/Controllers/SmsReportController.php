@@ -2,23 +2,24 @@
 
 namespace App\Http\Controllers;
 
-use DB;
+//use DB;
 use App\User;
-use Carbon\Carbon;
 
+use Carbon\Carbon;
 use App\SmsCampaigns;
+use Illuminate\Support\Arr;
 use App\SmsCampaignNumbersA;
 use App\SmsCampaignNumbersB;
 use App\SmsCampaignNumbersC;
+
+
 use App\SmsCampaignNumbersD;
 use App\SmsCampaignNumbersE;
-
-
-use App\Datatables\DataTableClass;
-use Illuminate\Support\Arr;
 use Illuminate\Http\Request;
-use App\Core\Users\ClientInterface;
 use App\Core\Reports\SmsReport;
+use App\Datatables\DataTableClass;
+use Illuminate\Support\Facades\DB;
+use App\Core\Users\ClientInterface;
 use Illuminate\Support\Facades\Auth;
 use PhpOffice\PhpSpreadsheet\Spreadsheet;
 use PhpOffice\PhpSpreadsheet\Writer\Xlsx;
@@ -1686,12 +1687,8 @@ class SmsReportController extends Controller
 
         $data = [];
 
-        $records = DB::select(DB::raw("select sum(sms_count) 'totalsms'
-                                                from user_count_smses
-                                                where user_id = '$userid'
-                                                and DATE(created_at) BETWEEN '$fromdate' and '$todate'"));
+        $records = DB::select(DB::raw("SELECT SUM(sms_count) as totalsms FROM user_count_smses WHERE user_id = ? AND DATE(created_at) BETWEEN ? AND ?"), [$userid, $fromdate, $todate]);
         
-
         return $records;
     }
 
