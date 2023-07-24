@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-//use DB;
+use DB;
 use App\User;
 
 use Carbon\Carbon;
@@ -18,7 +18,7 @@ use App\SmsCampaignNumbersE;
 use Illuminate\Http\Request;
 use App\Core\Reports\SmsReport;
 use App\Datatables\DataTableClass;
-use Illuminate\Support\Facades\DB;
+// use Illuminate\Support\Facades\DB;
 use App\Core\Users\ClientInterface;
 use Illuminate\Support\Facades\Auth;
 use PhpOffice\PhpSpreadsheet\Spreadsheet;
